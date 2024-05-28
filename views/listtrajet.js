@@ -33,6 +33,7 @@ const ListTrajet = () => {
   };
 
   const showDatepicker = () => {
+    setShow(true);
     showMode("date");
   };
 
@@ -258,10 +259,13 @@ const ListTrajet = () => {
         />
       </View>
       <SafeAreaView style={styles.datepicker}>
-        <Image
-          source={require("../assets/calendar.png")}
-          style={styles.calendarIcon}
-        />
+      <TouchableOpacity onPress={showDatepicker}>
+          <Image
+            source={require("../assets/calendar.png")}
+            style={styles.calendarIcon}
+          />
+        </TouchableOpacity>
+        {show && (
         <DateTimePicker
           testID="dateTimePicker"
           value={date}
@@ -269,6 +273,7 @@ const ListTrajet = () => {
           is24Hour={true}
           onChange={onChange}
         />
+      )}
       </SafeAreaView>
       <ScrollView style={styles.tablecont}>
         <View style={styles.tableContainer}>
