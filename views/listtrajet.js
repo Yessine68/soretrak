@@ -265,6 +265,7 @@ const ListTrajet = () => {
             style={styles.calendarIcon}
           />
         </TouchableOpacity>
+        <Text style={styles.selectedDate}>{formatDate(date)}</Text>
         {show && (
         <DateTimePicker
           testID="dateTimePicker"
@@ -474,6 +475,11 @@ const styles = StyleSheet.create({
     height: 24,
     marginRight: 5, // Adjust spacing if needed
   },
+  selectedDate: {
+    fontSize: 18,
+    fontFamily: "Itim",
+    color: Colors.Black,
+  }
 });
 
 export default ListTrajet;
