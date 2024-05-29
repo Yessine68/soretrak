@@ -632,7 +632,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     marginLeft: 35,
-    marginTop: 30,
+    marginTop: 1,
     justifyContent: "center",
     marginBottom: 10,
     fontFamily: "Sed",

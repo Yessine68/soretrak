@@ -444,7 +444,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginLeft: 50,
-    marginTop: 30,
+    marginTop: 1,
     justifyContent: "center",
     marginBottom: 10,
     fontFamily: "Sed",
@@ -524,21 +524,21 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.Gray,
     width: "100%",
-    marginBottom: 20,
+    marginBottom: 10,
     marginVertical: 20,
   },
   paymentLabel: {
     fontSize: 16,
     color: Colors.DarkGray,
     fontFamily: "Inter",
-    marginBottom: 10,
+    marginBottom: 5,
     textAlign: "justify",
   },
   explainLabel: {
     fontSize: 12,
     color: Colors.DarkGray,
     fontFamily: "Inter",
-    marginTop: 10,
+    marginTop: 5,
     textAlign: "justify",
   },
   passwordinput: {

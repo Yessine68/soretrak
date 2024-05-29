@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, Modal } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, Modal, BackHandler } from "react-native";
 import Colors from "../assets/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import MaterialCommunityIcons
 import useCustomFonts from "../assets/fonts"; // Assuming useCustomFonts.js is in the same directory
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,  useFocusEffect} from '@react-navigation/native';
 import registerViewModel from '../viewModels/registerViewModel'; // Import the view model
 const Register = () => {
     const fontsLoaded = useCustomFonts(); // Use the custom hook
@@ -85,6 +85,22 @@ const Register = () => {
             console.error('Error creating user:', error.response.data);
         }
     };
+
+    useFocusEffect(
+      React.useCallback(() => {
+        const onBackPress = () => {
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'VotreTrajet' }],
+          });
+          return true;
+        };
+  
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+  
+        return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+      }, [navigation])
+    );
 
 
 

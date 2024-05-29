@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, BackHandler  } from "react-native";
 
 
 import Colors from "../assets/colors";
@@ -8,7 +8,7 @@ import useCustomFonts from "../assets/fonts";
 import emailIcon from "../assets/email.png";
 import passwordIcon from "../assets/password.png";
 import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import MaterialCommunityIcons
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 // Assuming useCustomFonts.js is in the same directory
 import loginViewModel from "../viewModels/loginViewModel";
 
@@ -50,6 +50,21 @@ const Login = () => {
     };
     checkReservationSession();
   }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'VotreTrajet' }],
+        });
+        return true;
+      };
+
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, [navigation])
+  );
   const login = async () => {
     try {
       setErrorText("");

@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
     color: Colors.Blue,
     fontSize: 24,
     textAlign: "center",
-    marginVertical: 20,
+    marginVertical: 5,
     fontFamily: "Sed",
   },
   loggedInUserName: {
