@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
   logoutButton: {
     marginTop: 20,
     backgroundColor: Colors.Blue,
-    paddingVertical: 10,
+    paddingVertical: 5,
     paddingHorizontal: 20,
     borderRadius: 5,
   },
@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 48,
-    marginTop: 20,
+    marginTop: 10,
     textAlign: "center", // Center the text horizontally
     justifyContent: "center", // Center the text vertically // Take up available vertical space
   },
@@ -373,18 +373,18 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 20,
     marginBottom: 10,
-    marginTop: 30,
+    marginTop: 5,
     fontFamily: "Ink",
   },
   secondSubTitle: {
     fontSize: 20,
     fontFamily: "Ink",
-    marginBottom: 10,
+    marginBottom: 5,
   },
   radioButtonContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 13,
+    marginBottom: 1,
   },
   radioButton: {
     width: 24,
@@ -464,14 +464,14 @@ const styles = StyleSheet.create({
   searchButton: {
     backgroundColor: Colors.Blue,
     width: "100%",
-    paddingVertical: 10,
+    paddingVertical: 5,
     alignItems: "center",
     borderRadius: 20,
   },
   logoutButtonBonus: {
     backgroundColor: Colors.Yellow,
     width: "100%",
-    paddingVertical: 10,
+    paddingVertical: 5,
     alignItems: "center",
     borderRadius: 20,
     marginTop: 10,
