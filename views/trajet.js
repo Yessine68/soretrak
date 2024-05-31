@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 48,
-    marginTop: 10,
+    marginTop: 5,
     textAlign: "center", // Center the text horizontally
     justifyContent: "center", // Center the text vertically // Take up available vertical space
   },

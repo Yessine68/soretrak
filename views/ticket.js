@@ -435,7 +435,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.White,
-    padding: 30,
+    padding: 10,
+    marginLeft : 4
   },
   underline: {
     textDecorationLine: "underline",
@@ -444,15 +445,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginLeft: 50,
-    marginTop: 1,
+    marginTop: 10,
     justifyContent: "center",
-    marginBottom: 10,
+    marginBottom: 5,
     fontFamily: "Sed",
   },
   confirmButton: {
     backgroundColor: Colors.Blue,
     paddingVertical: 15,
-    borderRadius: 10,
+    borderRadius: 10,  
     alignItems: "center",
   },
   confirmButtonText: {
@@ -496,7 +497,7 @@ const styles = StyleSheet.create({
     fontFamily: "Inter",
     fontSize: 18,
 
-    color: Colors.Blue,
+    color: Colors.Black,
     marginTop: 5,
   },
   inputprix: {
@@ -508,7 +509,7 @@ const styles = StyleSheet.create({
     fontFamily: "Inter",
     fontSize: 22,
     textAlignVertical: "center",
-    color: Colors.Blue,
+    color: Colors.Black,
     marginTop: 5,
   },
   rowprix: {

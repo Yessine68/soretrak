@@ -583,7 +583,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   subTitle: {
-    fontSize: 16,
+    fontSize: 1,
     fontFamily: "Inter",
     color: Colors.Black,
     marginRight: 10,
@@ -595,7 +595,7 @@ const styles = StyleSheet.create({
     color: Colors.Green,
   },
   rectangle: {
-    marginTop: 120,
+    marginTop: 115,
     marginLeft: 30,
     borderWidth: 1,
     borderRadius: 20,
@@ -607,7 +607,7 @@ const styles = StyleSheet.create({
     position: "absolute", // Adjust spacing as needed
   },
   inputContainer: {
-    marginTop: 30,
+    marginTop: 10,
   },
   labelInputRow: {
     flexDirection: "row",
@@ -628,13 +628,14 @@ const styles = StyleSheet.create({
     borderColor: Colors.Gray,
     paddingHorizontal: 10,
     fontSize: 18,
+    color : Colors.Black
   },
   title: {
     fontSize: 32,
     marginLeft: 35,
     marginTop: 1,
     justifyContent: "center",
-    marginBottom: 10,
+    marginBottom: 5,
     fontFamily: "Sed",
   },
   itimText: {
@@ -678,6 +679,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     textAlign: "center",
     fontSize: 18,
+    color : Colors.black
   },
   toText: {
     fontSize: 20,
@@ -685,7 +687,7 @@ const styles = StyleSheet.create({
     color: Colors.Black,
   },
   datepicker: {
-    marginTop: 10,
+    marginTop: 1,
     marginLeft: 90,
     flexDirection: "row",
     alignItems: "center",
@@ -757,7 +759,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   grayButton: {
-    backgroundColor: Colors.Grey,
+    backgroundColor: Colors.Blue,
   },
   yellowButton: {
     backgroundColor: Colors.Yellow,

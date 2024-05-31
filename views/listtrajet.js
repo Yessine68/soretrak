@@ -246,7 +246,7 @@ const ListTrajet = () => {
           style={styles.disabledInput}
           editable={false}
           placeholder="From"
-          placeholderTextColor={Colors.Gray}
+          placeholderTextColor={Colors.Black}
           value={stationFrom}
         />
         <Text style={styles.toText}>Vers </Text>
@@ -254,7 +254,7 @@ const ListTrajet = () => {
           style={styles.disabledInput}
           editable={false}
           placeholder="Destination"
-          placeholderTextColor={Colors.Gray}
+          placeholderTextColor={Colors.Black}
           value={stationTo}
         />
       </View>
@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     marginLeft: 35,
-    marginTop: 30,
+    marginTop: 10,
     justifyContent: "center",
     marginBottom: 10,
     fontFamily: "Sed",
@@ -411,6 +411,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     textAlign: "center",
     fontSize: 18,
+    color : Colors.Black
   },
   toText: {
     fontSize: 20,
