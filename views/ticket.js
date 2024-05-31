@@ -8,14 +8,15 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   Modal,
-  Platform
+  Platform,
+  BackHandler
 } from "react-native";
 import Colors from "../assets/colors"; // Assuming Colors.js defines color styles
 import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import MaterialCommunityIcons
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import useCustomFonts from "../assets/fonts"; // Assuming useCustomFonts.js is in the same directory
 import LigneService from "../viewModels/generalfile.js";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import * as Notifications from 'expo-notifications';
 const Ticket = () => {
   const fontsLoaded = useCustomFonts();
@@ -47,7 +48,21 @@ const Ticket = () => {
     };
     checkUserSession();
   }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Selectionne' }],
+        });
+        return true;
+      };
 
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, [navigation])
+  );
   useEffect(() => {
     const loadFromAsyncStorage = async () => {
       try {

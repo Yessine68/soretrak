@@ -679,7 +679,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     textAlign: "center",
     fontSize: 18,
-    color : Colors.black
+    color : Colors.Black
   },
   toText: {
     fontSize: 20,
