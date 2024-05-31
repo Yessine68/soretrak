@@ -17,7 +17,13 @@ import ManageTrajets from "./views/managetrajets";
 import AjouterLigne from "./views/ajouterligne";
 import ModifierLigne from "./views/modifierligne";
 import ManageClients from "./views/manageclients"; // Import ManageClients
-
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); 
+LogBox.ignoreAllLogs();
+LogBox.ignoreLogs([
+  'ViewPropTypes will be removed from React Native', 
+  '_RNGestureHandlerModule.default.flushOperations is not a function' 
+]);
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
